@@ -12,7 +12,8 @@ fetch('https://rickandmortyapi.com/api/character?page=' + pagina)
     return response.json();
   })
   .then((data) => {
-    displayCharacters(data.results);
+    console.log(data);
+    obtenerCharacters(data.results);
   })
 }  
 
@@ -29,27 +30,27 @@ prevPage.addEventListener ('click', () =>{
 cambioPagina (pagina); //la primera vez
 
 // Obtenemos los personajes
-function displayCharacters(characters) {
+function obtenerCharacters(characters) {
   const characterList = document.getElementById('character-list');
   characterList.innerHTML = '';
   characters.forEach(character => {
     
-     const listItem = document.createElement('li');
+     const li = document.createElement('li');
     
      const img = document.createElement('img');
      img.src = character.image;
-     listItem.appendChild(img);
+     li.appendChild(img);
     
      const name = document.createElement('h3');
      name.textContent = "Name: " + character.name;
-     listItem.appendChild(name);
+     li.appendChild(name);
     
      const species = document.createElement('p');
      species.textContent = `Species: ${character.species}`;
-     listItem.appendChild(species);
+     li.appendChild(species);
 
     
-     characterList.appendChild(listItem);
+     characterList.appendChild(li);
   });
 }
 
