@@ -38,7 +38,7 @@ function obtenerCharacters(characters) {
      const li = document.createElement('li');
     
      const img = document.createElement('img');
-     img.src = character.image;
+     img.src = character.image;                       //faltaria yn alt
      li.appendChild(img);
     
      const name = document.createElement('h3');
