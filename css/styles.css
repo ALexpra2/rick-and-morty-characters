@@ -48,6 +48,7 @@ table {
   display: flex;
   width: 100%;
   background-color: #60fbbf;
+
 }
 
 .pagination {
@@ -73,8 +74,22 @@ table {
 }
 
 ul {  
-  padding-top: 100px;
+  padding-top: 110px;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  border: black linear 1px;
+  margin: 20px;
+}
+
+
+
+#character-list li {
+  padding: 8px;
+  border: 1px lightgray solid;
+  border-radius: 4px;
+ 
 }
 
 
